@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <style>
+
+    body {
+      background: #fbfbfd;
+    }
+
+    .new_footer_area {
+      background: #fbfbfd;
+    }
+
+
+    .new_footer_top {
+      padding: 120px 0px 270px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .new_footer_area .footer_bottom {
+      padding-top: 5px;
+      padding-bottom: 50px;
+    }
+    .footer_bottom {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      color: #7f88a6;
+      padding: 27px 0px;
+    }
+    .new_footer_top .company_widget p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px;
+      color: #6a7695;
+      margin-bottom: 20px;
+    }
+    .new_footer_top .company_widget .f_subscribe_two .btn_get {
+      border-width: 1px;
+      margin-top: 20px;
+    }
+    .btn_get_two:hover {
+      background: transparent;
+      color: #5e2ced;
+    }
+    .btn_get:hover {
+      color: #fff;
+      background: #6754e2;
+      border-color: #6754e2;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+      text-decoration: none;
+      outline: none;
+    }
+
+
+
+    .new_footer_top .f_widget.about-widget .f_list li a:hover {
+      color: #5e2ced;
+    }
+    .new_footer_top .f_widget.about-widget .f_list li {
+      margin-bottom: 11px;
+    }
+    .f_widget.about-widget .f_list li:last-child {
+      margin-bottom: 0px;
+    }
+    .f_widget.about-widget .f_list li {
+      margin-bottom: 15px;
+    }
+    .f_widget.about-widget .f_list {
+      margin-bottom: 0px;
+    }
+    .new_footer_top .f_social_icon a {
+      width: 44px;
+      height: 44px;
+      line-height: 43px;
+      background: transparent;
+      border: 1px solid #e2e2eb;
+      font-size: 24px;
+    }
+    .f_social_icon a {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 45px;
+      color: #858da8;
+      display: inline-block;
+      background: #ebeef5;
+      text-align: center;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+    .ti-facebook:before {
+      content: "\e741";
+    }
+    .ti-twitter-alt:before {
+      content: "\e74b";
+    }
+    .ti-vimeo-alt:before {
+      content: "\e74a";
+    }
+    .ti-pinterest:before {
+      content: "\e731";
+    }
+
+    .btn_get_two {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background: #5e2ced;
+      border-color: #5e2ced;
+      color: #fff;
+    }
+
+    .btn_get_two:hover {
+      background: transparent;
+      color: #5e2ced;
+    }
+
+    .new_footer_top .f_social_icon a:hover {
+      background: #5e2ced;
+      border-color: #5e2ced;
+      color:white;
+    }
+    .new_footer_top .f_social_icon a + a {
+      margin-left: 4px;
+    }
+    .new_footer_top .f-title {
+      margin-bottom: 30px;
+      color: #263b5e;
+    }
+    .f_600 {
+      font-weight: 600;
+    }
+    .f_size_18 {
+      font-size: 18px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #4b505e;
+    }
+    .new_footer_top .f_widget.about-widget .f_list li a {
+      color: #6a7695;
+    }
+
+
+    .new_footer_top .footer_bg {
+      position: absolute;
+      bottom: 0;
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+      width: 100%;
+      height: 266px;
+    }
+
+    .new_footer_top .footer_bg .footer_bg_one {
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+      width: 330px;
+      height: 105px;
+      background-size:100%;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      -webkit-animation: myfirst 22s linear infinite;
+      animation: myfirst 22s linear infinite;
+    }
+
+    .new_footer_top .footer_bg .footer_bg_two {
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+      background-size:100%;
+      bottom: 0;
+      left: 38%;
+      position: absolute;
+      -webkit-animation: myfirst 30s linear infinite;
+      animation: myfirst 30s linear infinite;
+    }
+
+
+
+    @-moz-keyframes myfirst {
+      0% {
+        left: -25%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    @-webkit-keyframes myfirst {
+      0% {
+        left: -25%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    @keyframes myfirst {
+      0% {
+        left: -25%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    /*************footer End*****************/
+
+
+
+    p {
+      font-size: 1.1em; /* Промени ја големината на буквите во <p> елементите */
+    }
+
+    div {
+      font-size: 1.05em; /* Промени ја големината на буквите во <p> елементите */
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .col {
+      flex: 1;
+      padding: 10px;
+    }
+
+    body,h1,h2,h3,h4,h5,h6 {
+      font-family: "Raleway", sans-serif
+    }
+    body, html {
+      height: 100%; line-height: 1.8;
+    }
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    #title_one{
+      text-align: center;
+      padding-top: 20vh;
+    }
+    .blue-text {
+      color: #81d5f1;
+    }
+    #imgMan{
+      margin-right: 8vw;
+      margin-left: 4vw;
+    }
+
+    #lampInov{
+      margin-left: 4vw;
+      margin-top: 9vh;
+      height: 20vh;
+      width: 10vw;
+    }
+    .txt{
+      margin-left: 3vw;
+      margin-bottom: 7vh;
+    }
+    .codeImg{
+      height: 60vh;
+      width: 100vw;
+      opacity: 0.6;
+      margin-top: 3vh;
+    }
+    .loop-wrapper {
+      margin: 0 auto;
+      position: relative;
+      display: block;
+      height: 170px;
+      overflow: hidden;
+      background: #a5d9e28c;
+      width: 100vw;
+      color: #fff;
+    }
+    .mountain {
+      position: absolute;
+      right: -900px;
+      bottom: -20px;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        0 0 0 50px #4DB6AC,
+        60px 50px 0 70px #4DB6AC,
+        90px 90px 0 50px #4DB6AC,
+        250px 250px 0 50px #4DB6AC,
+        290px 320px 0 50px #4DB6AC,
+        320px 400px 0 50px #4DB6AC
+    ;
+      transform: rotate(130deg);
+      animation: mtn 20s linear infinite;
+    }
+    .hill {
+      position: absolute;
+      right: -900px;
+      bottom: -50px;
+      width: 400px;
+      border-radius: 50%;
+      height: 20px;
+      box-shadow:
+        0 0 0 50px #4DB6AC,
+        -20px 0 0 20px #4DB6AC,
+        -90px 0 0 50px #4DB6AC,
+        250px 0 0 50px #4DB6AC,
+        290px 0 0 50px #4DB6AC,
+        620px 0 0 50px #4DB6AC;
+      animation: hill 4s 2s linear infinite;
+    }
+    .tree, .tree:nth-child(2), .tree:nth-child(3) {
+      position: absolute;
+      height: 100px;
+      width: 35px;
+      bottom: 0;
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg) no-repeat;
+    }
+    .rock {
+      margin-top: -17%;
+      height: 2%;
+      width: 2%;
+      bottom: -2px;
+      border-radius: 20px;
+      position: absolute;
+      background: #ddd;
+    }
+    .truck, .wheels {
+      transition: all ease;
+      width: 85px;
+      margin-right: -60px;
+      bottom: 0px;
+      right: 50%;
+      position: absolute;
+      background: #eee;
+    }
+    .truck {
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg) no-repeat;
+      background-size: contain;
+      height: 60px;
+    }
+    .truck:before {
+      content: " ";
+      position: absolute;
+      width: 25px;
+      box-shadow:
+        -30px 28px 0 1.5px #fff,
+        -35px 18px 0 1.5px #fff;
+    }
+    .wheels {
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg) no-repeat;
+      height: 15px;
+      margin-bottom: 0;
+    }
+
+    .tree  { animation: tree 3s 0.000s linear infinite; }
+    .tree:nth-child(2)  { animation: tree2 2s 0.150s linear infinite; }
+    .tree:nth-child(3)  { animation: tree3 8s 0.050s linear infinite; }
+    .rock  { animation: rock 4s   -0.530s linear infinite; }
+    .truck  { animation: truck 4s   0.080s ease infinite; }
+    .wheels  { animation: truck 4s   0.001s ease infinite; }
+    .truck:before { animation: wind 1.5s   0.000s ease infinite; }
+
+
+    @keyframes tree {
+      0%   { transform: translate(1350px); }
+      50% {}
+      100% { transform: translate(-50px); }
+    }
+    @keyframes tree2 {
+      0%   { transform: translate(650px); }
+      50% {}
+      100% { transform: translate(-50px); }
+    }
+    @keyframes tree3 {
+      0%   { transform: translate(2750px); }
+      50% {}
+      100% { transform: translate(-50px); }
+    }
+
+    @keyframes rock {
+      0%   { right: -200px; }
+      100% { right: 2000px; }
+    }
+    @keyframes truck {
+      0%   { }
+      6%   { transform: translateY(0px); }
+      7%   { transform: translateY(-6px); }
+      9%   { transform: translateY(0px); }
+      10%   { transform: translateY(-1px); }
+      11%   { transform: translateY(0px); }
+      100%   { }
+    }
+    @keyframes wind {
+      0%   {  }
+      50%   { transform: translateY(3px) }
+      100%   { }
+    }
+    @keyframes mtn {
+      100% {
+        transform: translateX(-2000px) rotate(130deg);
+      }
+    }
+    @keyframes hill {
+      100% {
+        transform: translateX(-2000px);
+      }
+    }
+
+    .svg {
+      display: block;
+      margin: 0 auto;
+      margin-top: -100px;
+    }
+    .blend {
+      mix-blend-mode: multiply;
+    }
+    .isolate {
+      isolation: isolate;
+    }
+
+    #testButton {
+      background-color: #adcee6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      height: 6vh;
+      width: 20vw;
+      margin-bottom: 5vh;
+      margin-left: 40vw;
+    }
+    #testButton:hover {
+      background-color: #076ab9;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="proekt.html" class="w3-bar-item w3-button w3-wide">#FutureCrafting</a>
+  </div>
+</div>
+
+
+<!-- header -->
+<h1 id="title_one">
+  <span class="blue-text">Ве инспирираме</span> да го добиете <span class="blue-text">максимумот од знаењето</span> во оваа област!
+</h1>
+<div>
+  <img id="imgMan" src="img/man.jpg">
+  <img src="img/girl.jpg">
+</div>
+
+
+<!-- content -->
+<div>
+  <img id="lampInov" src="img/lamp.webp">
+  <h3 style="display: inline-block;"> Што е Java?</h3>
+  <p class="txt"> Java е објектно-ориентиран програмски јазик кој е развиен од страна на Sun Microsystems и беше првично пуштен во употреба во 1995 година. Денес, Java е еден од најпопуларните програмски јазици, користен во развој на широк спектар на апликации, вклучувајќи веб апликации, мобилни апликации (особено за Android), десктоп апликации, и големи enterprise системи. Една од најголемите предности на Java е неговата платформа независност - еднаш напишан код може да се извршува на било која платформа која има Java Virtual Machine (JVM).
+    <br><br>
+    Основни карактеристики на Java.
+    Java има неколку клучни карактеристики кои го издвојуваат од другите програмски јазици:
+    <br>
+    Објектно-ориентиран јазик: Java се фокусира на објекти и класи, овозможувајќи лесно управување и манипулација со податоци. Принципите на објектно-ориентираното програмирање како наследување, полиморфизам, и енкапсулација се централни во Java.
+    <br>
+    Платформска независност: Програмите напишани во Java се компајлираат во бајт-код кој може да се извршува на било која платформа која има JVM. Оваа карактеристика го прави Java многу популарен за мултиплатформски апликации.
+    <br>
+    Робустност и безбедност: Java нуди многу механизми за управување со меморија и грешки, што ја прави програма стабилна и сигурна. Автоматското управување со меморијата преку garbage collection го олеснува пишувањето на код без memory leaks.
+    <br>
+    Паралелизам и мулти-таскинг: Java поддржува мулти-таскинг преку својот модел на нишки (threads), овозможувајќи развој на апликации кои можат да извршуваат повеќе задачи истовремено.
+  </p>
+  <h3 style="text-align: center">Од каде да започнете?</h3>
+  <p class="txt">Инсталирање на Java Development Kit (JDK):
+    <br>
+    Преземете и инсталирајте ја најновата верзија на JDK од Oracle's официјална страница или од отворени алтернативи како OpenJDK. Ова ќе ви обезбеди алатки за компајлирање и извршување на Java програми.
+    <br><br>
+    Инсталирање на интегрирана развојна средина (IDE):
+    Изберете IDE како IntelliJ IDEA, Eclipse, или NetBeans. Овие алатки нудат многу корисни функции како авто-комплетирање, дебагирање и управување со проекти.
+    <br><br>
+    Запознавање со основите:
+    Научете ги основните концепти на Java како синтакса, променливи, типови на податоци, условни изрази, циклуси, и основни OOP концепти (класи, објекти, наследување).
+    Праксата е клучна, па започнете со мали програми и задачи за да го примените наученото.
+    <br><br>
+    Практични проекти и вежби:
+    Учествувајте во мали проекти за да го примените знаењето во реални ситуации.
+    Посетувајте кодинг платформи како LeetCode, HackerRank, или Codewars за решавање на алгоритамски задачи и вежби.</p> <br>
+  <p class="txt">Да започнеме со основниот пример "Hello, World!" - класичен начин за запознавање со основите на програмирањето. Во IntelliJ IDEA или друга развојна околина, создадете нов Java проект, додадете нов класен фајл и напишете го следниот код. Потоа зачувајте го фајлот како HelloWorld.java.Оваа програма е многу едноставна и ќе ви помогне да се запознаете со синтаксата на Java. Компилирајте го и извршете го кодот, и ќе видите "Hello, World!" на вашиот екран. </p>
+  <img style="margin-left: 37vw;" src="img/java%20code.jpg">
+  <p class="txt"> Пресметување на сума. Напишете програма која ќе пресметува сума на два броја. Во следниот пример, користиме влез од корисникот:</p>
+  <img style="margin-left: 33vw;" src="img/java%20codee.jpg">
+  <p class="txt">Пресметување на факториел - Напишете програма која ќе го пресметува факториелот на даден број. Оваа програма ќе побара од корисникот да внесе број, ќе го пресмета факториелот на тој број користејќи рекурзија, и ќе го испечати резултатот. Во следниот пример, користиме рекурзија:</p>
+  <img style="margin-left: 34vw" src="img/javacode3.jpg">
+<br>
+  <br>
+  <br>
+
+  <br><br>
+  <div class="container text-center">
+    <br>
+    <div class="row">
+      <div class="col order">
+        Циклусот <b>for</b> е многу корисен кога се знае точно колку пати треба да се повтори блокот код. Тој се состои од три дела: <b>иницијализација, услов и инкремент/декремент.</b> Иницијализацијата се извршува само еднаш на почетокот, условот се проверува пред секое повторување, а инкрементот или декрементот се извршува по секое повторување.
+        Циклусот <b>for</b> е многу читлив и го прави кодот лесен за разбирање кога се работи со фиксни повторувања.
+      </div>
+      <div class="col">
+        Циклусите while и do while се користат кога не е познато точно колку пати ќе се повтори блокот код, но условот за прекин е познат. Циклусот while прво го проверува условот и ако тој е вистинит, се извршува блокот код. Ова значи дека блокот може никогаш да не се изврши ако условот е лажен од самиот почеток.
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <p class="txt">Овој код користи for изјава за да го испечати бројот од 0 до 4. Изјавата започнува со i поставено на 0 и секој пат го зголемува i за 1 додека i е помало од 5.</p>
+  <img style="margin-left: 34vw" src="img/javafor.png">
+
+  <p class="txt">Овој код користи while изјава за да го испечати бројот од 0 до 4. Изјавата започнува со i поставено на 0 и се повторува додека i е помало од 5. Со секое повторување i се зголемува за 1.</p>
+  <img style="margin-left: 34vw" src="img/javawhile.png">
+
+  <p class="txt">Овој код користи do while изјава за да го испечати бројот од 0 до 4. Изјавата се извршува најмалку еднаш и продолжува да се извршува додека i е помало од 5. Со секое повторување i се зголемува за 1.</p>
+  <img style="margin-left: 34vw" src="img/javadowhile.png">
+
+  <p class="txt">Овој код користи if изјава за да провери дали x е поголемо од 5. Ако условот е исполнет, испечатува порака дека x е поголемо од 5.</p>
+  <img style="margin-left: 34vw" src="img/javaif.png">
+
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 style="text-align: center"> Иии да, стигнавте до целта..</h3>
+  <h3 style="text-align: center">Доколку сте љубопитни и сакате да научите нешто ново, воедно и да се продлабочите во овој програмски јазик, следете некој од најпопуларните курсеви:</h3>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card text-bg-dark mb-3">
+        <iframe width="auto" height="315" src="https://www.youtube.com/embed/videoseries?si=b885KqDj12Ae92i7&amp;list=PLwA-Iag0JsGCzltJMckASzGtpr96aHyQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        <div class="card-body">
+          <h5 class="card-title">Македонски Java Туторијал</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-bg-dark mb-3">
+        <iframe width="auto" height="315" src="https://www.youtube.com/embed/videoseries?si=refHuJFYdJOeIyqY&amp;list=PLDEPU7oft31kXhFhlZ1cFzqRY28lOwVjR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        <div class="card-body">
+          <h5 class="card-title">Српски Java Туторијал</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-bg-dark mb-3">
+        <iframe width="auto" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=0szcXVxo-9nw5I5-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        <div class="card-body">
+          <h5 class="card-title">Англиски Java Туторијал</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col">
+        <img src="img/learn.jpg" alt="Learn Image"> <br>
+        Персонализирано учење <br>
+        Учениците учат според свое темпо, според нивното ниво на разбирање. Почнувајќи од основите, а потоа забрзувајќи го темпото.
+      </div>
+      <div class="col">
+        <img src="img/content.jpg" alt="Content Image"> <br>
+        Доверлива содржина <br>
+        Туторијал создаден од ескперт во областа со доверливи практики и лекции. Секогаш достапно и бесплатно за учениците и професорите.
+      </div>
+      <div class="col">
+        <img src="img/student.jpg" alt="Student Image"> <br>
+        Прилагодување <br>
+        Едноставна прилагодливост во зависност од потребите на ученикот.
+      </div>
+    </div>
+  </div> <br> <br> <br>
+
+
+  <!--
+  <div class="fakeCoding">
+  <canvas class='hacker-3d-shiz'></canvas>
+  <canvas class='bars-and-stuff'></canvas>
+  <div class="output-console"></div>
+  </div>
+ -->
+
+  <!-- <div class="buttons">
+    <h4 style="text-align: center">Изберете:</h4>
+    <button style="background-color: lightblue;
+    height: 7vh;
+    width: 17vw;
+    border: 1px solid lightblue;
+    margin-top: 4vh;
+    margin-left: 41vw;">Ученик</button> <br>
+    <button style="background-color: lightblue;
+    height: 7vh;
+    width: 17vw;
+    border: 1px solid lightblue;
+    margin-top: 4vh;
+    margin-left: 41vw;">Професор</button>
+  </div> -->
+
+  <!-- <div class="loop-wrapper">
+    <div class="mountain"></div>
+    <div class="hill"></div>
+    <div class="tree"></div>
+    <div class="tree"></div>
+    <div class="tree"></div>
+    <div class="rock"></div>
+    <div class="truck"></div>
+    <div class="wheels"></div>
+  </div> -->
+
+</div>
+
+<button id="testButton">Тестирај го своето знаење</button>
+
+<script>
+  document.getElementById('testButton').addEventListener('click', function() {
+    window.location.href = 'https://worksheetzone.org/learning?worksheetid=667c844116ece54fea798330';
+  });
+</script>
+
+<footer class="new_footer_area bg_color">
+  <div class="new_footer_top">
+    <div class="container">
+      <div class="row">
+
+
+      </div>
+    </div>
+    <div class="footer_bg">
+      <div class="footer_bg_one"></div>
+      <div class="footer_bg_two"></div>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-7">
+          <p class="mb-0 f_400"></p>
+        </div>
+        <div class="col-lg-6 col-sm-5 text-right">
+          <p></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

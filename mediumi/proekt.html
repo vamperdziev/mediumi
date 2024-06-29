@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <title>CodeCrafters</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+    h5 {
+      text-align: center;
+    }
+
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%; line-height: 1.8;}
+    .bgimg-1 {background-position: center; background-size: cover; background-image: url("/w3images/mac.jpg"); min-height: 100%;}
+    .w3-bar .w3-button {padding: 16px;}
+    .team-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .team-container .w3-col {
+      display: flex;
+      flex: 1 0 21%;
+      margin: 1%;
+    }
+
+    .team-container .w3-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .w3-row-padding {
+      display: flex;
+      justify-content: center;
+    }
+
+    .w3-quarter {
+      margin: 0 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">#FutureCrafting</a>
+    <a href="kompajler.html" class="w3-bar-item w3-button w3-wide">Online Compiler</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ЗА НАС</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-book"></i> КУРСЕВИ</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> ПРЕТПЛАТА</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> КОНТАКТ</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Затвори ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ЗА НАС</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">ТИМОТ</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ЦЕНИ</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">КОНТАКТ</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">CodeCrafters</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium"></span><br>
+    <span class="w3-large">Изгради ја својата иднина во програмирањето, бит по бит.</span>
+    <p><a href="#team" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Дознајте повеќе и започнете со учење уште денес</a></p>
+  </div>
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ЗА КУРСОТ</h3>
+  <p class="w3-center w3-large">Клучни карактеристики на нашиот курс</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Сигурност</p>
+      <p>Нудиме сигурни извори на информации со кои гарантираме дека ќе ви помогнат во вашата идна ИТ кариера.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Мотивација</p>
+      <p>Мотивирањето е клучната состојба за успешно учење и напредок. Со поставување цели, визуелизација на успехот и постојано стремење кон напредок. Верувајте во себе и секогаш се поттикнувајте да бидете подобри од вчера!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-lightbulb-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Иновација</p>
+      <p>Нудиме најсовремен начин на учење на било кој јазик заедно со најсовремените технологии и техники за учење, истовремено осигурувајќи ви конкурентска предност и можности за иновација..</p>
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">КУРСЕВИ</h3>
+  <p class="w3-center w3-large">Одберете за кој курс сакате да дознаете повеќе</p>
+  <div class="w3-row-padding w3-grayscale team-container" style="margin-top:64px">
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team1.jpg" alt="Mike" class="team-img">
+        <div class="w3-container">
+          <h3>Java</h3>
+          <p>Java е широко употребуван објектно-ориентиран јазик, познат по својата преносливост и сигурност. Се користи во развојот на веб и мобилни апликации, како и за софтвер за претпријатија и големи системи.</p>
+          <p><a href="java.html" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Повеќе</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team2.jpg" alt="John" class="team-img">
+        <div class="w3-container">
+          <h3>C++</h3>
+          <p>C++ е моќен јазик за системски софтвер и игри, познат по својата брзина и ефикасност. Овозможува објектно-ориентирано програмирање и е популарен за апликации кои бараат висока перформанса.</p>
+          <p><a href="c++.html" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Повеќе</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team3.jpg" alt="Jane" class="team-img">
+        <div class="w3-container">
+          <h3>Python</h3>
+          <p>Python е високонапонски јазик со едноставна синтакса, популарен за веб-развој, наука за податоци и автоматизација. Нуди богата библиотека и е одличен за брз развој на прототипови и сложени апликации.</p>
+          <p><a href="python.html" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Повеќе</a></p>
+        </div>
+      </div>
+    </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="/w3images/team4.jpg" alt="Dan" class="team-img">
+          <div class="w3-container">
+            <h3>C#</h3>
+            <p>C# (C-Sharp) е програмски јазик развиен од Microsoft кој работи на .NET Framework. C# се користи за развој на веб-апликации, десктоп апликации, мобилни апликации, игри и многу повеќе.</p>
+            <p><a href="cpp.html" class="w3-button w3-light-grey w3-block" ><i class="fa fa-envelope"></i> Повеќе</a></p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <h3 class="w3-center">РАЗВОЈНИ ОКОЛИНИ</h3>
+  <h5><b><a href="Intelijji.html">IntelliJ IDEA</a></b>  е интегрирана развојна околина (IDE) создадена од JetBrains. Примарно се користи за развој на програми напишани во Java, но исто така работи и со многу други програмски јазици.</h5>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="pricing">
+  <h3 class="w3-center">ЦЕНИ</h3>
+  <p class="w3-center w3-large">Изберете го пакетот кој најмногу одговара на вашите потреби</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Основен</li>
+        <li class="w3-padding-16"><b>10</b> Часови месечно</li>
+        <li class="w3-padding-16"><b>1</b> Тутор</li>
+        <li class="w3-padding-16"><b>Достапно</b> онлајн учење</li>
+        <li class="w3-padding-16"><b>Основни</b> материјали</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 19.99</h2>
+          <span class="w3-opacity">месечно</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Регистрирај се</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Про</li>
+        <li class="w3-padding-16"><b>20</b> Часови месечно</li>
+        <li class="w3-padding-16"><b>2</b> Тутори</li>
+        <li class="w3-padding-16"><b>Достапно</b> онлајн учење</li>
+        <li class="w3-padding-16"><b>Напредни</b> материјали</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 29.99</h2>
+          <span class="w3-opacity">месечно</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Регистрирај се</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Премиум</li>
+        <li class="w3-padding-16"><b>Неограничено</b> Часови месечно</li>
+        <li class="w3-padding-16"><b>4</b> Тутори</li>
+        <li class="w3-padding-16"><b>Достапно</b> онлајн учење</li>
+        <li class="w3-padding-16"><b>Комплетни</b> материјали</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 49.99</h2>
+          <span class="w3-opacity">месечно</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Регистрирај се</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">КОНТАКТ</h3>
+  <p class="w3-center w3-large">Имате прашање? Пополнете ја формата и ние ќе ве контактираме</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Скопје, Македонија</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Телефон: +389 70 123 456</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: info@codecrafters.com</p>
+      <br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Вашето Име" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Вашиот Емаил" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Предмет" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Порака" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-black" type="submit">
+            <i class="fa fa-paper-plane"></i> ИСПРАТИ Порака
+          </button>
+        </p>
+      </form>
+    </div>
+    <div class="w3-half">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-greyscale" style="width:100%;height:510px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>На Почеток</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://codecrafters.com" target="_blank" class="w3-hover-text-green">Codecrafters</a></p>
+</footer>
+
+
+</body>
+</html>
